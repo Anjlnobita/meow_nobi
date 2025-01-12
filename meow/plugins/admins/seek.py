@@ -11,7 +11,7 @@ from meow.utils import AdminRightsCheck, seconds_to_min
 
 
 
-@app.on_message(filters.command(seek) & filters.group & ~BANNED_USERS)
+@app.on_message(filters.command(["seek"]) & filters.group & ~BANNED_USERS)
 @AdminRightsCheck
 async def seek_comm(cli, message: Message, _, chat_id):
     if len(message.command) == 1:
