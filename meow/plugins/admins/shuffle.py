@@ -12,7 +12,7 @@ from meow.utils.decorators import AdminRightsCheck
 
 
 
-@app.on_message(filters.command(shuffle) & filters.group & ~BANNED_USERS)
+@app.on_message(filters.command(["shuffle"]) & filters.group & ~BANNED_USERS)
 @AdminRightsCheck
 async def admins(Client, message: Message, _, chat_id):
     if not len(message.command) == 1:
