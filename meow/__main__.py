@@ -11,10 +11,10 @@ from pyrogram import idle
 
 import config
 from config import BANNED_USERS
-from VIPMUSIC import HELPABLE, LOGGER, app, userbot
-from VIPMUSIC.core.call import VIP
-from VIPMUSIC.plugins import ALL_MODULES
-from VIPMUSIC.utils.database import get_banned_users, get_gbanned
+from meow import HELPABLE, LOGGER, app, userbot
+from meow.core.call import meow
+from meow.plugins import ALL_MODULES
+from meow.utils.database import get_banned_users, get_gbanned
 
 application = Application.builder().token(config.BOT_TOKEN).build()
 
