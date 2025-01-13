@@ -1,3 +1,6 @@
+from typing import Callable, Optional
+
+import pyrogram
 from pyrogram import Client
 
 import config
@@ -174,3 +177,15 @@ class userbot(Client):
                 await self.five.stop()
         except:
             pass
+
+
+
+def on_cmd(
+    filters: Optional[pyrogram.filters.Filter] = None, group: int = 0
+) -> Callable:
+    def decorator(func: Callable) -> Callable:
+        for client in clients:
+            client.add_handler(pyrogram.handlers.MessageHandler(func, filters), group)
+        return func
+
+    return decorator
