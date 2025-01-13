@@ -5,7 +5,7 @@ import heroku3
 from pyrogram import filters
 
 import config
-from meow.core.mongo import mongogb
+from meow.core.mongo import mongodb
 
 from .logging import LOGGER
 
