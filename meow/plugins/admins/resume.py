@@ -1,3 +1,4 @@
+"""
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
@@ -31,7 +32,7 @@ async def resume_com(cli, message: Message, _, chat_id):
         _["admin_4"].format(message.from_user.mention),
         reply_markup=InlineKeyboardMarkup(buttons_resume),
     )
-
+"""
 
 __MODULE__ = "Resume"
 __HELP__ = """
