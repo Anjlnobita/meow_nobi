@@ -6,7 +6,7 @@ from meow.core.dir import dirr
 from meow.core.git import git
 from meow.core.userbot import userbot
 from meow.core.youtube import nobii
-from meow.misc import dbb, heroku, sudo
+from meow.misc import dbb, heroku
 
 from .logging import LOGGER
 
