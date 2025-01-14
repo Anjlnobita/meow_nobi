@@ -11,15 +11,15 @@ from meow.misc import dbb, heroku, sudo
 from .logging import LOGGER
 
 
-async def main():
-    await sudo()
-    dirr()
-    git()
-    dbb()
-    heroku()
-    nobii()
-    app = nobita()
-    userbot = userbot()
+
+
+dirr()
+git()
+dbb()
+heroku()
+nobii()
+app = nobita()
+userbot = userbot()
 
 
 
