@@ -10,14 +10,25 @@ from meow.misc import dbb, heroku, sudo
 
 from .logging import LOGGER
 
-dirr()
-git()
-dbb()
-heroku()
+
 sudo()
+
+dirr()
+
+git()
+
+dbb()
+
+heroku()
+
 nobii()
+
 app = nobita()
+
 userbot = userbot()
+
+
+
 from .platforms import *
 
 YouTube = YouTubeAPI()
