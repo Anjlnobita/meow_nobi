@@ -1,3 +1,4 @@
+"""
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
@@ -31,7 +32,7 @@ async def pause_admin(cli, message: Message, _, chat_id):
         _["admin_2"].format(message.from_user.mention),
         reply_markup=InlineKeyboardMarkup(buttons),
     )
-
+"""
 
 __MODULE__ = "Pause"
 __HELP__ = """
