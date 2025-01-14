@@ -9,7 +9,7 @@ from ..logging import LOGGER
 
 assistants = []
 assistantids = []
-client = []
+clients = []
 
 
 class userbot(Client):
