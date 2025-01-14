@@ -36,13 +36,12 @@ XCB = [
     "main",
 ]
 
-
 def dbb():
-    global db
     global clonedb
-    db = {}
+    global db
     clonedb = {}
-    LOGGER(__name__).info(f"Database Initialized.")
+    db = {}
+    LOGGER(__name__).info(f"Local Database Initialized.")
 
 
 async def sudo():
@@ -62,6 +61,7 @@ async def sudo():
         for user_id in sudoers:
             SUDOERS.add(user_id)
     LOGGER(__name__).info(f"Sudoers Loaded.")
+
 
 
 def heroku():
