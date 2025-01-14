@@ -2,7 +2,6 @@ from pyrogram import filters
 from pyrogram.types import Message
 
 from config import BANNED_USERS, adminlist
-from strings import get_command
 from meow import app
 from meow.utils.database import (
     delete_authuser,
