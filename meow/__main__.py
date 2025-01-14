@@ -57,8 +57,8 @@ async def init():
     LOGGER("mewow.plugins").info("Successfully Imported All Modules ")
 
     await userbot.start()
-    await nobi.start()
-    await nobi.decorators()
+    #await nobi.start()
+    #await nobi.decorators()
     LOGGER("meow").info("meow successfully started ")
     await idle()
 
