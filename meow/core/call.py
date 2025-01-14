@@ -19,7 +19,7 @@ from pytgcalls.types.stream import StreamAudioEnded
 import config
 from meow import LOGGER, YouTube, app
 from meow.misc import db
-from JioSavaan.utils.database import (
+from meow.utils.database import (
     add_active_chat,
     add_active_video_chat,
     get_lang,
@@ -598,4 +598,4 @@ class Call(PyTgCalls):
             await self.change_stream(client, update.chat_id)
 
 
-Anony = Call()
+meow = Call()
