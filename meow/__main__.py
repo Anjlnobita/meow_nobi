@@ -15,6 +15,7 @@ from meow import HELPABLE, LOGGER, app, userbot
 #from meow.core.call import meow
 from meow.plugins import ALL_MODULES
 from meow.utils.database import get_banned_users, get_gbanned
+from meow.misc import sudo
 
 application = Application.builder().token(config.BOT_TOKEN).build()
 
