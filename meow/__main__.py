@@ -30,12 +30,8 @@ async def init():
         LOGGER("meow").error(
             "No Assistant Clients Vars Defined!.. Exiting Process."
         )
-        return
-    if not config.SPOTIFY_CLIENT_ID and not config.SPOTIFY_CLIENT_SECRET:
-        LOGGER("meow").warning(
-            "No Spotify Vars defined. Your bot won't be able to play spotify queries."
-        )
-
+        exit()
+    await sudo()
     try:
         users = await get_gbanned()
         for user_id in users:
@@ -72,3 +68,12 @@ def main() -> None:
 if __name__ == "__main__":
     asyncio.get_event_loop_policy().get_event_loop().run_until_complete(init())
     LOGGER("meow").info("stopping meow meow ") 
+    
+    
+    
+    
+    
+    
+    
+
+      
