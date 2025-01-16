@@ -1,4 +1,4 @@
-"""
+
 from pyrogram import filters
 from pyrogram.types import Message
 
@@ -40,4 +40,3 @@ async def admins(cli, message: Message, _, chat_id):
         return await message.reply_text(_["admin_27"])
     else:
         return await message.reply_text(usage)
-"""
