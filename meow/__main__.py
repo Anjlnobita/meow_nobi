@@ -12,7 +12,7 @@ from pyrogram import idle
 import config
 from config import BANNED_USERS
 from meow import HELPABLE, LOGGER, app, userbot
-#from meow.core.call import meow
+from meow.core.call import meow
 from meow.plugins import ALL_MODULES
 from meow.utils.database import get_banned_users, get_gbanned
 from meow.misc import sudo
@@ -54,8 +54,8 @@ async def init():
     LOGGER("meow.plugins").info("Successfully Imported All Modules ")
 
     await userbot.start()
-    await nobi.start()
-    await nobi.decorators()
+    await meow.start()
+    await meow.decorators()
     LOGGER("meow").info("meow successfully started ")
     await idle()
 
