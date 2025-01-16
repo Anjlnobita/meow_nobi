@@ -25,9 +25,9 @@ from pytgcalls.types.stream import StreamAudioEnded
 
 import config
 from strings import get_string
-from VIPMUSIC import LOGGER, YouTube, app
-from VIPMUSIC.misc import db
-from VIPMUSIC.utils.database import (
+from meow import LOGGER, YouTube, app
+from meow.misc import db
+from meow.utils.database import (
     add_active_chat,
     add_active_video_chat,
     get_assistant,
@@ -42,11 +42,11 @@ from VIPMUSIC.utils.database import (
     remove_active_video_chat,
     set_loop,
 )
-from VIPMUSIC.utils.exceptions import AssistantErr
-from VIPMUSIC.utils.formatters import check_duration, seconds_to_min, speed_converter
-from VIPMUSIC.utils.inline.play import stream_markup, telegram_markup
-from VIPMUSIC.utils.stream.autoclear import auto_clean
-from VIPMUSIC.utils.thumbnails import gen_thumb
+from meow.utils.exceptions import AssistantErr
+from meow.utils.formatters import check_duration, seconds_to_min, speed_converter
+from meow.utils.inline.play import stream_markup, telegram_markup
+from meow.utils.stream.autoclear import auto_clean
+from meow.utils.thumbnails import gen_thumb
 
 active = []
 autoend = {}
