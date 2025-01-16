@@ -1,4 +1,4 @@
-
+"""
 from pyrogram import filters
 from pyrogram.types import Message
 
@@ -147,4 +147,5 @@ __HELP__ = """
 <b>✧ /unauth</b> [Usᴇʀɴᴀᴍᴇ] - Rᴇᴍᴏᴠᴇ ᴀ ᴜsᴇʀ ғʀᴏᴍ AUTH LIST ᴏғ ᴛʜᴇ ɢʀᴏᴜᴘ.
 
 <b>✧ /authusers</b> - Cʜᴇᴄᴋ AUTH LIST ᴏғ ᴛʜᴇ ɢʀᴏᴜᴘ.
+"""
 """
