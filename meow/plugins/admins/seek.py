@@ -64,4 +64,3 @@ async def seek_comm(cli, message: Message, _, chat_id):
     else:
         db[chat_id][0]["played"] += duration_to_skip
     await mystic.edit_text(_["admin_33"].format(seconds_to_min(to_seek)))
-"""
