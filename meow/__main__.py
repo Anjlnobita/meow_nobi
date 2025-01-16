@@ -54,8 +54,8 @@ async def init():
     LOGGER("meow.plugins").info("Successfully Imported All Modules ")
 
     await userbot.start()
-    #await nobi.start()
-    #await nobi.decorators()
+    await nobi.start()
+    await nobi.decorators()
     LOGGER("meow").info("meow successfully started ")
     await idle()
 
@@ -69,12 +69,3 @@ def main() -> None:
 if __name__ == "__main__":
     asyncio.get_event_loop_policy().get_event_loop().run_until_complete(init())
     LOGGER("meow").info("stopping meow meow ") 
-    
-    
-    
-    
-    
-    
-    
-
-      
