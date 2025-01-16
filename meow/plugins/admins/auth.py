@@ -1,4 +1,4 @@
-"""
+
 from pyrogram import filters
 from pyrogram.types import Message
 
@@ -135,7 +135,6 @@ async def authusers(client, message: Message, _):
             text += f"   {_['auth_8']} {admin_name}[`{admin_id}`]\n\n"
         await mystic.delete()
         await message.reply_text(text)
-"""
 
 
 __MODULE__ = "Auᴛʜ"
