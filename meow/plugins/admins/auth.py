@@ -135,7 +135,7 @@ async def authusers(client, message: Message, _):
             text += f"   {_['auth_8']} {admin_name}[`{admin_id}`]\n\n"
         await mystic.delete()
         await message.reply_text(text)
-
+"""
 
 __MODULE__ = "Auᴛʜ"
 __HELP__ = """
@@ -147,5 +147,4 @@ __HELP__ = """
 <b>✧ /unauth</b> [Usᴇʀɴᴀᴍᴇ] - Rᴇᴍᴏᴠᴇ ᴀ ᴜsᴇʀ ғʀᴏᴍ AUTH LIST ᴏғ ᴛʜᴇ ɢʀᴏᴜᴘ.
 
 <b>✧ /authusers</b> - Cʜᴇᴄᴋ AUTH LIST ᴏғ ᴛʜᴇ ɢʀᴏᴜᴘ.
-"""
 """
