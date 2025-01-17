@@ -8,6 +8,9 @@ from meow.core.userbot import userbot
 from meow.core.youtube import nobii
 from meow.misc import dbb, heroku
 
+from telethon import TelegramClient
+
+
 import config
 from .logging import LOGGER
 
