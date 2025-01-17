@@ -10,7 +10,7 @@ from meow.misc import dbb, heroku
 
 from telethon import TelegramClient
  
-from .__main__ import telethn 
+from meow.__main__ import telethn 
 
 import config
 from .logging import LOGGER
