@@ -17,6 +17,7 @@ from meow.plugins import ALL_MODULES
 from meow.utils.database import get_banned_users, get_gbanned
 from meow.misc import sudo
 
+from meow import telethn
 from telethon import TelegramClient
 
 
