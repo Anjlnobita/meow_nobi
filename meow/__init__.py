@@ -8,9 +8,15 @@ from meow.core.userbot import userbot
 from meow.core.youtube import nobii
 from meow.misc import dbb, heroku
 
+import config
 from .logging import LOGGER
 
-from . import telethn
+api_id = config.API_ID
+api_hash = config.API_HASH
+bot_token = config.BOT_TOKEN
+
+
+telethn = TelegramClient("hinata", api_id, api_hash)
 
 
 
