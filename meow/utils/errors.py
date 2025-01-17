@@ -7,10 +7,10 @@ import config
 
 from meow import app
 
-OWNER_ID = config.OWNER_ID <=======================================================================================================>
+OWNER_ID = config.OWNER_ID 
 
 
-# <================================================ FUNCTION =======================================================>
+
 def split_limits(text):
     if len(text) < 2048:
         return [text]
