@@ -1,7 +1,7 @@
 import json
 import os
 
-from meow.core.bot import nobita
+from meow.core.bot import nobita, telethn, application
 from meow.core.dir import dirr
 from meow.core.git import git
 from meow.core.userbot import userbot
@@ -19,7 +19,8 @@ heroku()
 nobii()
 app = nobita()
 userbot = userbot()
-
+telethn = telethn()
+application = application ()
 
 
 
