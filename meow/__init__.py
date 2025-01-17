@@ -10,17 +10,9 @@ from meow.misc import dbb, heroku
 
 from .logging import LOGGER
 
-import config
-
-from telethon import TelegramClient
 
 
-api_id = config.API_ID
-api_hash = config.API_HASH
-bot_token = config.BOT_TOKEN
 
-
-telethn = TelegramClient("hinata", api_id, api_hash)
 
 
 
