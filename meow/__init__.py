@@ -8,7 +8,6 @@ from meow.core.userbot import userbot
 from meow.core.youtube import nobii
 from meow.misc import dbb, heroku
  
-from meow.__main__ import telethn 
 
 import config
 from .logging import LOGGER
