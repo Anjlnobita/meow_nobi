@@ -80,6 +80,12 @@ def main() -> None:
     application.run_polling(drop_pending_updates=True)
 
 
+    if len(argv) not in (1, 3, 4):
+        telethn.disconnect()
+    else:
+        telethn.run_until_disconnected()
+
+
 if __name__ == "__main__":
     asyncio.get_event_loop_policy().get_event_loop().run_until_complete(init())
     LOGGER("meow").info("stopping meow meow ") 
