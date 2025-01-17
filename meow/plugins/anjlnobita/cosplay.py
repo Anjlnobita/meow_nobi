@@ -1,6 +1,6 @@
 import requests
 from telethon import events
-from meow import telethn as meow
+from __main__ import telethn as meow
 
 @meow.on(events.NewMessage(pattern="^/cosplay"))
 async def waifu(event):
