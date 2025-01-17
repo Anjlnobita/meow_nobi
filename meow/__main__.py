@@ -56,13 +56,13 @@ async def init():
             if hasattr(imported_module, "__HELP__") and imported_module.__HELP__:
                 HELPABLE[imported_module.__MODULE__.lower()] = imported_module
     LOGGER("meow.plugins").info("Successfully Imported All Modules ")
-
+   
+    await telethn.start(bot_token=bot_token)
     await userbot.start()
     await meow.start()
     await meow.decorators()
     LOGGER("meow").info("meow successfully started ")
     await idle()
-    await telethn.start(bot_token=bot_token)
 
 
 def main() -> None:
