@@ -9,7 +9,8 @@ from meow.core.youtube import nobii
 from meow.misc import dbb, heroku
 
 from telethon import TelegramClient
-
+ 
+from .__main__ import telethn 
 
 import config
 from .logging import LOGGER
