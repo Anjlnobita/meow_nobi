@@ -1,21 +1,18 @@
 import os
 from datetime import datetime
-
 from PIL import Image
 from pyrogram import filters
 from telegraph import Telegraph, exceptions, upload_file
-
 from meow import app
 from meow.utils.errors import capture_err
 
-# <=======================================================================================================>
-
 TMP_DOWNLOAD_DIRECTORY = "tg-File/"
-bname = "meow"  # ᴅᴏɴ'ᴛ ᴇᴅɪᴛ ᴛʜɪᴀ ʟɪɴᴇ
+bname = "meow"
+
+# ᴅᴏɴ'ᴛ ᴇᴅɪᴛ ᴛʜɪs ʟɪɴᴇ
 telegraph = Telegraph()
 r = telegraph.create_account(short_name=bname)
 auth_url = r["auth_url"]
-
 
 # <================================================ FUNCTION =======================================================>
 @app.on_message(filters.command(["tgm", "tmg", "telegraph"], prefixes="/"))
@@ -36,37 +33,22 @@ async def telegraph_upload(client, message):
                 resize_image(downloaded_file_name)
             try:
                 start = datetime.now()
-                media_urls = upload_file(downloaded_file_name)
+                media_url = upload_file(downloaded_file_name)[0]
             except exceptions.TelegraphException as exc:
                 await h.edit_text("Error: " + str(exc))
-                os.remove(downloaded_file_name)
+            os.remove(downloaded_file_name)
             else:
                 end = datetime.now()
                 ms_two = (end - start).seconds
                 os.remove(downloaded_file_name)
                 await h.edit_text(
-                    f"""
-➼ **Uploaded to [Telegraph](https://telegra.ph{media_urls[0]}) in {ms + ms_two} seconds.**\n 
-➼ **Copy Link :** `https://telegra.ph{media_urls[0]}`""",
-                    disable_web_page_preview=False,
+                    f""" ➼ **Uploaded to [Telegraph] in {ms + ms_two} seconds.**\n ➼ **Copy Link :** `https://telegra.ph{media_url}`"""
                 )
     else:
         await message.reply_text(
             "Reply to a message to get a permanent telegra.ph link."
         )
 
-
 def resize_image(image):
     im = Image.open(image)
     im.save(image, "PNG")
-
-
-# <=================================================== HELP ====================================================>
-__help__ = """ 
-➠ *TELEGRAPH*:
-
-» /tgm, /tmg, /telegraph*:* `get telegram link of replied media`
- """
-
-__mod_name__ = "TELEGRAPH"
-# <================================================ END =======================================================>
