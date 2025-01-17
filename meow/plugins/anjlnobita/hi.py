@@ -112,6 +112,6 @@ async def reverse_image_search(update: Update, context: CallbackContext):
     await status_msg.delete()
 
 
-dispatcher.add_handler(
+application.add_handler(
     CommandHandler(["reverse", "pp", "p", "grs", "sauce"], reverse_image_search)
 )
