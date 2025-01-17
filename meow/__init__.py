@@ -10,7 +10,7 @@ from meow.misc import dbb, heroku
 
 from .logging import LOGGER
 
-from .main import telethn
+from . import telethn
 
 
 
