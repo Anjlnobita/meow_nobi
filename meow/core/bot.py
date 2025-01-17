@@ -1,7 +1,22 @@
 import uvloop
 
 uvloop.install()
+#
 
+from telethon import TelegramClient
+from telegram.ext import Application
+
+application = Application.builder().token(config.BOT_TOKEN).build()
+
+api_id = config.API_ID
+api_hash = config.API_HASH
+bot_token = config.BOT_TOKEN
+
+
+telethn = TelegramClient("hinata", api_id, api_hash)
+
+
+#
 from pyrogram import Client, errors
 from pyrogram.enums import ChatMemberStatus
 
