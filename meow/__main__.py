@@ -16,19 +16,9 @@ from meow.core.call import meow
 from meow.plugins import ALL_MODULES
 from meow.utils.database import get_banned_users, get_gbanned
 from meow.misc import sudo
+from meow import application, telethn
 
-
-from telethon import TelegramClient
-
-
-application = Application.builder().token(config.BOT_TOKEN).build()
-
-api_id = config.API_ID
-api_hash = config.API_HASH
 bot_token = config.BOT_TOKEN
-
-
-telethn = TelegramClient("hinata", api_id, api_hash)
 
 
 
