@@ -7,15 +7,11 @@ from meow.core.git import git
 from meow.core.userbot import userbot
 from meow.core.youtube import nobii
 from meow.misc import dbb, heroku
-
-from telethon import TelegramClient
  
 from meow.__main__ import telethn 
 
 import config
 from .logging import LOGGER
-
-telethn = telethn()
 
 dirr()
 git()
