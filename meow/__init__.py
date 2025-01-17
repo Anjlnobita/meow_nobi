@@ -20,7 +20,7 @@ nobii()
 app = nobita()
 userbot = userbot()
 telethn = telethn()
-application = application ()
+application = application()
 
 
 
