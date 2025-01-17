@@ -19,8 +19,8 @@ heroku()
 nobii()
 app = nobita()
 userbot = userbot()
-telethn = telethn()
-application = application()
+telethn = telethn
+application = application
 
 
 
