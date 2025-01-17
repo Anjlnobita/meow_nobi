@@ -27,7 +27,7 @@ api_hash = config.API_HASH
 bot_token = config.BOT_TOKEN
 
 
-telethn = TelegramClient("hinata", api_id, api_hash, bot_token)
+telethn = TelegramClient("hinata", api_id, api_hash)
 
 
 
@@ -72,7 +72,7 @@ async def init():
     await meow.decorators()
     LOGGER("meow").info("meow successfully started ")
     await idle()
-    await telethn.start()
+    await telethn.start(bot_token=bot_token)
 
 
 def main() -> None:
