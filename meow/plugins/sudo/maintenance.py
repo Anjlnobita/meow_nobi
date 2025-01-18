@@ -2,9 +2,9 @@ from pyrogram import filters
 from pyrogram.types import Message
 
 from strings import get_command, get_string
-from VIPMUSIC import app
-from VIPMUSIC.misc import SUDOERS
-from VIPMUSIC.utils.database import (
+from meow import app
+from meow.misc import SUDOERS
+from meow.utils.database import (
     get_lang,
     is_maintenance,
     maintenance_off,
