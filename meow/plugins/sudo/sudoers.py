@@ -3,10 +3,10 @@ from pyrogram.types import Message
 
 from config import BANNED_USERS, MONGO_DB_URI, OWNER_ID
 from strings import get_command
-from VIPMUSIC import app
-from VIPMUSIC.misc import SUDOERS
-from VIPMUSIC.utils.database import add_sudo, remove_sudo
-from VIPMUSIC.utils.decorators.language import language
+from meow import app
+from meow.misc import SUDOERS
+from meow.utils.database import add_sudo, remove_sudo
+from meow.utils.decorators.language import language
 
 # Command
 ADDSUDO_COMMAND = get_command("ADDSUDO_COMMAND")
