@@ -1,14 +1,3 @@
-#
-# Copyright (C) 2024 by THE-VIP-BOY-OP@Github, < https://github.com/THE-VIP-BOY-OP >.
-#
-# This file is part of < https://github.com/THE-VIP-BOY-OP/VIP-MUSIC > project,
-# and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/THE-VIP-BOY-OP/VIP-MUSIC/blob/master/LICENSE >
-#
-# All rights reserved.
-#
-
-
 from typing import Callable, Optional
 
 import pyrogram
@@ -23,38 +12,38 @@ assistantids = []
 clients = []
 
 
-class Userbot(Client):
+class nobita(Client):
     def __init__(self):
         self.one = Client(
-            "VIPString1",
+            "meowstring1",
             api_id=config.API_ID,
             api_hash=config.API_HASH,
             session_string=str(config.STRING1),
         )
 
         self.two = Client(
-            "VIPString2",
+            "meowstring2",
             api_id=config.API_ID,
             api_hash=config.API_HASH,
             session_string=str(config.STRING2),
         )
 
         self.three = Client(
-            "VIPString3",
+            "meowstring3",
             api_id=config.API_ID,
             api_hash=config.API_HASH,
             session_string=str(config.STRING3),
         )
 
         self.four = Client(
-            "VIPString4",
+            "meowstring4",
             api_id=config.API_ID,
             api_hash=config.API_HASH,
             session_string=str(config.STRING4),
         )
 
         self.five = Client(
-            "VIPString5",
+            "meowstring5",
             api_id=config.API_ID,
             api_hash=config.API_HASH,
             session_string=str(config.STRING5),
@@ -65,10 +54,7 @@ class Userbot(Client):
         if config.STRING1:
             await self.one.start()
             try:
-                await self.one.join_chat("THE_VIP_BOY_OP")
-                await self.one.join_chat("THE_VIP_BOY")
-                await self.one.join_chat("TG_FRIENDSS")
-                await self.one.join_chat("VIP_CREATORS")
+                await self.one.join_chat("nobi_bots")
             except:
                 pass
             assistants.append(1)
@@ -93,10 +79,7 @@ class Userbot(Client):
         if config.STRING2:
             await self.two.start()
             try:
-                await self.two.join_chat("TheVIP")
-                await self.two.join_chat("VIPSupport")
-                await self.two.join_chat("THE-VIP-BOY-OP")
-                await self.two.join_chat("TheTeamVk")
+                await self.two.join_chat("nobi_bots")
             except:
                 pass
             assistants.append(2)
@@ -121,10 +104,7 @@ class Userbot(Client):
         if config.STRING3:
             await self.three.start()
             try:
-                await self.three.join_chat("TheVIP")
-                await self.three.join_chat("VIPSupport")
-                await self.three.join_chat("THE-VIP-BOY-OP")
-                await self.three.join_chat("TheTeamVk")
+                await self.three.join_chat("nobi_bots")
             except:
                 pass
             assistants.append(3)
@@ -149,10 +129,7 @@ class Userbot(Client):
         if config.STRING4:
             await self.four.start()
             try:
-                await self.four.join_chat("TheVIP")
-                await self.four.join_chat("VIPSupport")
-                await self.four.join_chat("THE-VIP-BOY-OP")
-                await self.four.join_chat("TheTeamVk")
+                await self.four.join_chat("nobi_bots")
             except:
                 pass
             assistants.append(4)
@@ -177,10 +154,7 @@ class Userbot(Client):
         if config.STRING5:
             await self.five.start()
             try:
-                await self.five.join_chat("TheVIP")
-                await self.five.join_chat("VIPSupport")
-                await self.five.join_chat("THE-VIP-BOY-OP")
-                await self.five.join_chat("TheTeamVk")
+                await self.five.join_chat("nobi_bots")
             except:
                 pass
             assistants.append(5)
