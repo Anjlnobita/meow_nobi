@@ -4,9 +4,9 @@ from inspect import getfullargspec
 from pyrogram import filters
 from pyrogram.types import Message
 
-from VIPMUSIC import app
-from VIPMUSIC.misc import SUDOERS
-from VIPMUSIC.utils.database import get_client
+from meow import app
+from meow.misc import SUDOERS
+from meow.utils.database import get_client
 
 
 @app.on_message(filters.command("setpfp", prefixes=".") & SUDOERS)
