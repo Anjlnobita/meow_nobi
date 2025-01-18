@@ -12,14 +12,14 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from youtube_search import YoutubeSearch
 
 from config import BANNED_USERS, SERVER_PLAYLIST_LIMIT
-from VIPMUSIC import Carbon, app
-from VIPMUSIC.utils.decorators.language import language, languageCB
-from VIPMUSIC.utils.inline.playlist import (
+from meow import Carbon, app
+from meow.utils.decorators.language import language, languageCB
+from meow.utils.inline.playlist import (
     botplaylist_markup,
     get_playlist_markup,
     warning_markup,
 )
-from VIPMUSIC.utils.stream.stream import stream
+from meow.utils.stream.stream import stream
 
 # Define a dictionary to track the last message timestamp for each user
 user_last_message_time = {}
