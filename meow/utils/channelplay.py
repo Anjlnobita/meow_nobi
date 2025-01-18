@@ -1,4 +1,4 @@
- from meow import app
+from meow import app
 from meow.utils.database import get_cmode
 
 
