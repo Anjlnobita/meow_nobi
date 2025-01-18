@@ -1,11 +1,5 @@
 import asyncio
 import importlib
-from telegram.ext import Application
-
-from telegram import InlineKeyboardButton, InlineKeyboardMarkup
-from telegram import InlineKeyboardMarkup, InlineKeyboardButton
-from telegram import Update
-from telegram.ext import CommandHandler, CallbackContext, MessageHandler, filters
 
 from pyrogram import idle
 
@@ -16,21 +10,6 @@ from meow.core.call import meow
 from meow.plugins import ALL_MODULES
 from meow.utils.database import get_banned_users, get_gbanned
 from meow.misc import sudo
-
-
-
-from telethon import TelegramClient
-from telegram.ext import Application
-
-application = Application.builder().token(config.BOT_TOKEN).build()
-
-api_id = config.API_ID
-api_hash = config.API_HASH
-bot_token = config.BOT_TOKEN
-
-
-telethn = TelegramClient("hinata", api_id, api_hash)
-
 
 async def init():
     if (
@@ -63,29 +42,15 @@ async def init():
         if hasattr(imported_module, "__MODULE__") and imported_module.__MODULE__:
             if hasattr(imported_module, "__HELP__") and imported_module.__HELP__:
                 HELPABLE[imported_module.__MODULE__.lower()] = imported_module
-    LOGGER("meow.plugins").info("Successfully Imported All Modules ")
-   
-    await telethn.start(bot_token=bot_token)
+    LOGGER("meow.plugins").info("sucessful all meow module imported ")
+
     await userbot.start()
     await meow.start()
     await meow.decorators()
-    LOGGER("meow").info("meow successfully started ")
+    LOGGER("meow").info("meow started")
     await idle()
-
-
-def main() -> None:
-    """Run bot."""
-
-
-    application.run_polling(drop_pending_updates=True)
-
-
-    if len(argv) not in (1, 3, 4):
-        telethn.disconnect()
-    else:
-        telethn.run_until_disconnected()
 
 
 if __name__ == "__main__":
     asyncio.get_event_loop_policy().get_event_loop().run_until_complete(init())
-    LOGGER("meow").info("stopping meow meow ") 
+    LOGGER("meow").info("meow meow stopping")
