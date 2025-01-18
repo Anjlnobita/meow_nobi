@@ -9,9 +9,9 @@ from pyrogram.raw import types
 import config
 from config import OWNER_ID, adminlist, chatstats, clean, userstats
 from strings import get_command
-from VIPMUSIC import app
-from VIPMUSIC.utils.cleanmode import protected_messages
-from VIPMUSIC.utils.database import (
+from meow import app
+from meow.utils.cleanmode import protected_messages
+from meow.utils.database import (
     get_active_chats,
     get_authuser_names,
     get_particular_top,
@@ -24,8 +24,8 @@ from VIPMUSIC.utils.database import (
     update_particular_top,
     update_user_top,
 )
-from VIPMUSIC.utils.decorators.language import language
-from VIPMUSIC.utils.formatters import alpha_to_int
+from meow.utils.decorators.language import language
+from meow.utils.formatters import alpha_to_int
 
 BROADCAST_COMMAND = get_command("BROADCAST_COMMAND")
 AUTO_DELETE = config.CLEANMODE_DELETE_MINS
