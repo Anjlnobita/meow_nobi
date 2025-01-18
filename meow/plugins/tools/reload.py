@@ -7,12 +7,12 @@ from pyrogram.types import CallbackQuery, Message
 
 from config import BANNED_USERS, adminlist, lyrical
 from strings import get_command
-from VIPMUSIC import app
-from VIPMUSIC.core.call import VIP
-from VIPMUSIC.misc import db
-from VIPMUSIC.utils.database import get_authuser_names, get_cmode
-from VIPMUSIC.utils.decorators import ActualAdminCB, AdminActual, language
-from VIPMUSIC.utils.formatters import alpha_to_int
+from meow import app
+from meow.core.call import meow as VIP
+from meow.misc import db
+from meow.utils.database import get_authuser_names, get_cmode
+from meow.utils.decorators import ActualAdminCB, AdminActual, language
+from meow.utils.formatters import alpha_to_int
 
 ### Multi-Lang Commands
 RELOAD_COMMAND = get_command("RELOAD_COMMAND")
