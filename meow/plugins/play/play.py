@@ -8,6 +8,9 @@ from pyrogram.errors import FloodWait
 from pyrogram.types import InlineKeyboardMarkup, InputMediaPhoto, Message
 from pytgcalls.exceptions import NoActiveGroupCall
 
+
+from meow.utils.errors import @capture_err
+
 import config
 from config import BANNED_USERS, LOG_GROUP_ID, OWNER_ID, lyrical
 from meow import LOGGER, Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app
