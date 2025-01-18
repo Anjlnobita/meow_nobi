@@ -10,23 +10,23 @@ from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
 from config import BANNED_USERS, LOG_GROUP_ID, OWNER_ID, lyrical
-from VIPMUSIC import LOGGER, Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app
-from VIPMUSIC.core.call import VIP
-from VIPMUSIC.utils import seconds_to_min, time_to_seconds
-from VIPMUSIC.utils.channelplay import get_channeplayCB
-from VIPMUSIC.utils.database import add_served_chat, get_assistant, is_video_allowed
-from VIPMUSIC.utils.decorators.language import languageCB
-from VIPMUSIC.utils.decorators.play import PlayWrapper
-from VIPMUSIC.utils.formatters import formats
-from VIPMUSIC.utils.inline.play import (
+from meow import LOGGER, Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app
+from meow.core.call import VIP
+from meow.utils import seconds_to_min, time_to_seconds
+from meow.utils.channelplay import get_channeplayCB
+from meow.utils.database import add_served_chat, get_assistant, is_video_allowed
+from meow.utils.decorators.language import languageCB
+from meow.utils.decorators.play import PlayWrapper
+from meow.utils.formatters import formats
+from meow.utils.inline.play import (
     livestream_markup,
     playlist_markup,
     slider_markup,
     track_markup,
 )
-from VIPMUSIC.utils.inline.playlist import botplaylist_markup
-from VIPMUSIC.utils.logger import play_logs
-from VIPMUSIC.utils.stream.stream import stream
+from meow.utils.inline.playlist import botplaylist_markup
+from meow.utils.logger import play_logs
+from meow.utils.stream.stream import stream
 
 user_last_message_time = {}
 user_command_count = {}
