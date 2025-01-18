@@ -12,7 +12,7 @@ assistantids = []
 clients = []
 
 
-class nobita(Client):
+class userbot(Client):
     def __init__(self):
         self.one = Client(
             "meowstring1",
