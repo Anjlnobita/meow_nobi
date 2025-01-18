@@ -94,9 +94,8 @@ async def _clear_(chat_id):
             f"**ᴄᴏᴜʟᴅ ɪ ɢᴇᴛ ᴀᴅᴍɪɴ ᴀᴄᴄᴇss? ɪᴛ ᴡɪʟʟ ʜᴇʟᴘ ᴋᴇᴇᴘ ᴛʜᴇ sᴏɴɢs ᴘʟᴀʏɪɴɢ ᴍᴏʀᴇ ʀᴇʟɪᴀʙʟʏ. ᴛʜᴀɴᴋs ɪɴ ᴀᴅᴠᴀɴᴄᴇ! 🎵😊{text}**",
         )
 
-    # Sending the final message
-    try:
         await
+
     except Exception as e:
         print(f"Error sending message: {e}")
 
