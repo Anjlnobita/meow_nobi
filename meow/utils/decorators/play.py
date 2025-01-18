@@ -12,10 +12,10 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from config import PLAYLIST_IMG_URL, PRIVATE_BOT_MODE
 from config import SUPPORT_GROUP as SUPPORT_CHAT
 from strings import get_string
-from VIPMUSIC import YouTube, app
-from VIPMUSIC.core.call import VIP
-from VIPMUSIC.misc import SUDOERS
-from VIPMUSIC.utils.database import (
+from meow import YouTube, app
+from meow.core.call import meow
+from meow.misc import SUDOERS
+from meow.utils.database import (
     get_assistant,
     get_cmode,
     get_lang,
@@ -27,7 +27,7 @@ from VIPMUSIC.utils.database import (
     is_served_private_chat,
     set_loop,
 )
-from VIPMUSIC.utils.inline import botplaylist_markup
+from meow.utils.inline import botplaylist_markup
 
 links = {}
 
@@ -146,7 +146,7 @@ def PlayWrapper(command):
                 member.chat.id async for member in userbot.get_call_members(chat_id)
             ]
             if await is_active_chat(chat_id) and userbot.id not in call_participants_id:
-                await VIP.st_stream(chat_id)
+                await meow.st_stream(chat_id)
                 await set_loop(chat_id, 0)
 
             return await command(
@@ -172,7 +172,7 @@ def PlayWrapper(command):
                     await is_active_chat(chat_id)
                     and userbot.id not in call_participants_id
                 ):
-                    await VIP.st_stream(chat_id)
+                    await meow.st_stream(chat_id)
                     await set_loop(chat_id, 0)
 
                 return await command(
@@ -266,7 +266,7 @@ def PlayWrapper(command):
             member.chat.id async for member in userbot.get_call_members(chat_id)
         ]
         if await is_active_chat(chat_id) and userbot.id not in call_participants_id:
-            await VIP.st_stream(chat_id)
+            await meow.st_stream(chat_id)
             await set_loop(chat_id, 0)
         return await command(
             client,
