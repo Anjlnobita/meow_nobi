@@ -3,7 +3,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from unidecode import unidecode
 
 from meow import app
-from VIPMUSIC.core.call import _st_ as clean
+from meow.core.call import _st_ as clean
 from meow.misc import SUDOERS
 from meow.utils.database import (
     get_active_chats,
