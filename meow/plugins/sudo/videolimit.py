@@ -2,10 +2,10 @@ from pyrogram import filters
 from pyrogram.types import Message
 
 from strings import get_command
-from VIPMUSIC import app
-from VIPMUSIC.misc import SUDOERS
-from VIPMUSIC.utils.database import set_video_limit
-from VIPMUSIC.utils.decorators.language import language
+from meow import app
+from meow.misc import SUDOERS
+from meow.utils.database import set_video_limit
+from meow.utils.decorators.language import language
 
 VIDEOLIMIT_COMMAND = get_command("VIDEOLIMIT_COMMAND")
 
