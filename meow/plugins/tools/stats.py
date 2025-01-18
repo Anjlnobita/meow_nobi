@@ -13,11 +13,11 @@ from pytgcalls.__version__ import __version__ as pytgver
 import config
 from config import BANNED_USERS
 from strings import get_command
-from VIPMUSIC import YouTube, app
-from VIPMUSIC.core.userbot import assistants
-from VIPMUSIC.misc import SUDOERS, pymongodb
-from VIPMUSIC.plugins import ALL_MODULES
-from VIPMUSIC.utils.database import (
+from meow import YouTube, app
+from meow.core.userbot import assistants
+from meow.misc import SUDOERS, pymongodb
+from meow.plugins import ALL_MODULES
+from meow.utils.database import (
     get_global_tops,
     get_particulars,
     get_queries,
@@ -27,8 +27,8 @@ from VIPMUSIC.utils.database import (
     get_top_chats,
     get_topp_users,
 )
-from VIPMUSIC.utils.decorators.language import language, languageCB
-from VIPMUSIC.utils.inline.stats import (
+from meow.utils.decorators.language import language, languageCB
+from meow.utils.inline.stats import (
     back_stats_buttons,
     back_stats_markup,
     get_stats_markup,
