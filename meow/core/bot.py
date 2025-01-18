@@ -99,7 +99,7 @@ class nobita(Client):
                         BotCommand("end", "sᴛᴏᴘ ᴛʜᴇ ᴘʟᴀʏɪɴɢ sᴏɴɢ"),
                         BotCommand("skip", "sᴋɪᴘ ᴛʜᴇ ᴄᴜʀʀᴇɴᴛ ᴘʟᴀʏɪɴɢ sᴏɴɢ"),
                     ],
-                    scope=BotCommandScopeAllChatAdministrators(),
+                    scope=    BotCommandScopeAllGroupChats(),
                 )
             except Exception as e:
                 LOGGER(__name__).error(f"Failed to set bot commands: {e}")
