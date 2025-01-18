@@ -4,7 +4,7 @@ from pyrogram.types import Message
 from config import BANNED_USERS
 from strings import get_command
 from meow import app
-from VIPMUSIC.utils.database.memorydatabase import get_loop, set_loop
+from meow.utils.database import get_loop, set_loop
 from meow.utils.decorators import AdminRightsCheck
 
 # Commands
