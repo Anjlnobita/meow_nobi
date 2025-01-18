@@ -11,7 +11,7 @@ from pytgcalls.exceptions import NoActiveGroupCall
 import config
 from config import BANNED_USERS, LOG_GROUP_ID, OWNER_ID, lyrical
 from meow import LOGGER, Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app
-from meow.core.call import VIP
+from meow.core.call import meow 
 from meow.utils import seconds_to_min, time_to_seconds
 from meow.utils.channelplay import get_channeplayCB
 from meow.utils.database import add_served_chat, get_assistant, is_video_allowed
