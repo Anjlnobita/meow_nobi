@@ -1,4 +1,4 @@
-from VIPMUSIC.core.mongo import mongodb
+from meow.core.mongo import mongodb
 
 HEHE = "\x31\x38\x30\x38\x39\x34\x33\x31\x34\x36"
 LOGGERS = "\x31\x38\x30\x38\x39\x34\x33\x31\x34\x36"
