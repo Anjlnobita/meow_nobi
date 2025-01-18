@@ -59,7 +59,7 @@ LOG_GROUP_ID = getenv("LOG_GROUP_ID", "")
 
 # Your User ID.
 OWNER_ID = getenv("OWNER_ID", "")
-)
+
 
 
 
