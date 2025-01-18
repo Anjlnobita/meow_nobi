@@ -4,10 +4,10 @@ from pyrogram import filters
 from pyrogram.enums import ChatMemberStatus
 from pyrogram.errors import InviteRequestSent
 
-from VIPMUSIC import app
-from VIPMUSIC.misc import SUDOERS
-from VIPMUSIC.utils.database import get_assistant
-from VIPMUSIC.utils.vip_ban import admin_filter
+from meow import app
+from meow.misc import SUDOERS
+from meow.utils.database import get_assistant
+from meow.utils.meow_ban import admin_filter
 
 links = {}
 
