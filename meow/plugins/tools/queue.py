@@ -7,12 +7,12 @@ from pyrogram.types import CallbackQuery, InputMediaPhoto, Message
 import config
 from config import BANNED_USERS
 from strings import get_command
-from VIPMUSIC import app
-from VIPMUSIC.misc import db
-from VIPMUSIC.utils import VIPbin, get_channeplayCB, seconds_to_min
-from VIPMUSIC.utils.database import get_cmode, is_active_chat, is_music_playing
-from VIPMUSIC.utils.decorators.language import language, languageCB
-from VIPMUSIC.utils.inline import queue_back_markup, queue_markup
+from meow import app
+from meow.misc import db
+from meow.utils import meowbin, get_channeplayCB, seconds_to_min
+from meow.utils.database import get_cmode, is_active_chat, is_music_playing
+from meow.utils.decorators.language import language, languageCB
+from meow.utils.inline import queue_back_markup, queue_markup
 
 ###Commands
 QUEUE_COMMAND = get_command("QUEUE_COMMAND")
