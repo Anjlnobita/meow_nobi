@@ -1,5 +1,5 @@
 from config import LOG_GROUP_ID
-from VIPMUSIC import app
+from meow import app
 
 protected_messages = {}
 
