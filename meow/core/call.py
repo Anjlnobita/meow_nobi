@@ -1,12 +1,3 @@
-#
-# Copyright (C) 2024 by THE-VIP-BOY-OP@Github, < https://github.com/THE-VIP-BOY-OP >.
-#
-# This file is part of < https://github.com/THE-VIP-BOY-OP/VIP-MUSIC > project,
-# and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/THE-VIP-BOY-OP/VIP-MUSIC/blob/master/LICENSE >
-#
-# All rights reserved.
-#
 import asyncio
 import os
 from datetime import datetime, timedelta
@@ -34,9 +25,9 @@ from pytgcalls.types.stream import StreamAudioEnded
 
 import config
 from strings import get_string
-from VIPMUSIC import LOGGER, YouTube, app
-from VIPMUSIC.misc import db
-from VIPMUSIC.utils.database import (
+from meow import LOGGER, YouTube, app
+from meow.misc import db
+from meow.utils.database import (
     add_active_chat,
     add_active_video_chat,
     get_assistant,
@@ -51,11 +42,11 @@ from VIPMUSIC.utils.database import (
     remove_active_video_chat,
     set_loop,
 )
-from VIPMUSIC.utils.exceptions import AssistantErr
-from VIPMUSIC.utils.formatters import check_duration, seconds_to_min, speed_converter
-from VIPMUSIC.utils.inline.play import stream_markup, telegram_markup
-from VIPMUSIC.utils.stream.autoclear import auto_clean
-from VIPMUSIC.utils.thumbnails import gen_thumb
+from meow.utils.exceptions import AssistantErr
+from meow.utils.formatters import check_duration, seconds_to_min, speed_converter
+from meow.utils.inline.play import stream_markup, telegram_markup
+from meow.utils.stream.autoclear import auto_clean
+from meow.utils.thumbnails import gen_thumb
 
 active = []
 autoend = {}
@@ -105,10 +96,7 @@ async def _clear_(chat_id):
 
     # Sending the final message
     try:
-        await app.send_message(
-            chat_id,
-            f"**🎧 ꜱᴏɴɢ ʜᴀꜱ ᴇɴᴅᴇᴅ ɪɴ ᴠᴄ🥺**{text}",
-        )
+        await
     except Exception as e:
         print(f"Error sending message: {e}")
 
