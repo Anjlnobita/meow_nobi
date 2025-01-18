@@ -6,10 +6,10 @@ from pyrogram.types import Message
 
 from config import BANNED_USERS
 from strings import get_command
-from VIPMUSIC import app
-from VIPMUSIC.misc import SUDOERS
-from VIPMUSIC.utils import get_readable_time
-from VIPMUSIC.utils.database import (
+from meow import app
+from meow.misc import SUDOERS
+from meow.utils import get_readable_time
+from meow.utils.database import (
     add_banned_user,
     get_banned_count,
     get_banned_users,
@@ -17,7 +17,7 @@ from VIPMUSIC.utils.database import (
     is_banned_user,
     remove_banned_user,
 )
-from VIPMUSIC.utils.decorators.language import language
+from meow.utils.decorators.language import language
 
 # Command
 GBAN_COMMAND = get_command("GBAN_COMMAND")
