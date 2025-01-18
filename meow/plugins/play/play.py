@@ -54,6 +54,7 @@ SPAM_THRESHOLD = 2
     & ~BANNED_USERS
 )
 @PlayWrapper
+@capture_err
 async def play_command(
     client, message: Message, _, chat_id, video, channel, playmode, url, fplay
 ):
