@@ -3,8 +3,8 @@ import shutil
 
 from pyrogram import filters
 
-from VIPMUSIC import app
-from VIPMUSIC.misc import SUDOERS
+from meow import app
+from meow.misc import SUDOERS
 
 
 @app.on_message(filters.command("clean") & SUDOERS)
