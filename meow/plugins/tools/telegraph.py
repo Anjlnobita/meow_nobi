@@ -14,9 +14,9 @@ async def ul(_, message):
             # Download the file (this is the media file from the reply)
             path = await reply.download()
             # Upload the file to Telegraph
-            url = upload_file(path)[0]
+            url = upload_file(path)
             # Edit the message to show the generated link
-            await i.edit(f'Yᴏᴜʀ ʟɪɴᴋ sᴜᴄᴄᴇssғᴜʟ Gᴇɴ https://telegra.ph/{url}')
+            await i.edit(f'Yᴏᴜʀ ʟɪɴᴋ sᴜᴄᴄᴇssғᴜʟ Gᴇɴ https://telegra.ph/{url[0]}')
         except Exception as e:
             # Handle errors and inform the user
             await message.reply(f"Error occurred while processing: {str(e)}")
@@ -35,9 +35,9 @@ async def ul(_, message):
             # Download the file (this is the media file from the reply)
             path = await reply.download()
             # Upload the file to Graph.org
-            url = upload_file(path)[0]
+            url = upload_file(path)
             # Edit the message to show the generated link
-            await i.edit(f'Yᴏᴜʀ ʟɪɴᴋ sᴜᴄᴄᴇssғᴜʟ Gᴇɴ https://graph.org/{url}')
+            await i.edit(f'Yᴏᴜʀ ʟɪɴᴋ sᴜᴄᴄᴇssғᴜʟ Gᴇɴ https://graph.org/{url[0]}')
         except Exception as e:
             # Handle errors and inform the user
             await message.reply(f"Error occurred while processing: {str(e)}")
