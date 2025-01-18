@@ -4,11 +4,11 @@ from pyrogram import filters
 from pyrogram.types import Message
 
 from config import BANNED_USERS, PING_IMG_URL
-from VIPMUSIC import app
-from VIPMUSIC.core.call import VIP
-from VIPMUSIC.utils import bot_sys_stats
-from VIPMUSIC.utils.decorators.language import language
-from VIPMUSIC.utils.inline import support_group_markup
+from meow import app
+from meow.core.call import meow as VIP
+from meow.utils import bot_sys_stats
+from meow.utils.decorators.language import language
+from meow.utils.inline import support_group_markup
 
 
 @app.on_message(filters.command(["ping", "alive"]) & ~BANNED_USERS)
