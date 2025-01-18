@@ -14,10 +14,10 @@ from pyrogram.types import (
 
 from config import BANNED_USERS, SONG_DOWNLOAD_DURATION, SONG_DOWNLOAD_DURATION_LIMIT
 from strings import get_command
-from VIPMUSIC import YouTube, app
-from VIPMUSIC.utils.decorators.language import language, languageCB
-from VIPMUSIC.utils.formatters import convert_bytes
-from VIPMUSIC.utils.inline.song import song_markup
+from meow import YouTube, app
+from meow.utils.decorators.language import language, languageCB
+from meow.utils.formatters import convert_bytes
+from meow.utils.inline.song import song_markup
 
 # Command
 
