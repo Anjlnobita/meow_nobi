@@ -3,10 +3,10 @@ import asyncio
 from pyrogram.types import InlineKeyboardMarkup
 
 from strings import get_string
-from VIPMUSIC.misc import db
-from VIPMUSIC.utils.database import get_active_chats, get_lang, is_music_playing
-from VIPMUSIC.utils.formatters import seconds_to_min
-from VIPMUSIC.utils.inline import stream_markup_timerr, telegram_markup_timer
+from meow.misc import db
+from meow.utils.database import get_active_chats, get_lang, is_music_playing
+from meow.utils.formatters import seconds_to_min
+from meow.utils.inline import stream_markup_timerr, telegram_markup_timer
 
 from ..admins.callback import wrong
 
