@@ -3,10 +3,10 @@ from pyrogram.types import InlineKeyboardMarkup, Message
 
 from config import BANNED_USERS
 from strings import get_command
-from VIPMUSIC import app
-from VIPMUSIC.utils.database import get_playmode, get_playtype, is_nonadmin_chat
-from VIPMUSIC.utils.decorators import language
-from VIPMUSIC.utils.inline.settings import playmode_users_markup
+from meow import app
+from meow.utils.database import get_playmode, get_playtype, is_nonadmin_chat
+from meow.utils.decorators import language
+from meow.utils.inline.settings import playmode_users_markup
 
 ### Commands
 PLAYMODE_COMMAND = get_command("PLAYMODE_COMMAND")
