@@ -16,15 +16,15 @@ from pyrogram import filters
 import config
 from config import OWNER_ID
 from strings import get_command
-from VIPMUSIC import app
-from VIPMUSIC.misc import HAPP, SUDOERS, XCB
-from VIPMUSIC.utils.database import (
+from meow import app
+from meow.misc import HAPP, SUDOERS, XCB
+from meow.utils.database import (
     get_active_chats,
     remove_active_chat,
     remove_active_video_chat,
 )
-from VIPMUSIC.utils.decorators.language import language
-from VIPMUSIC.utils.pastebin import VIPbin
+from meow.utils.decorators.language import language
+from meow.utils.pastebin import VIPbin
 
 # Commands
 GETLOG_COMMAND = get_command("GETLOG_COMMAND")
