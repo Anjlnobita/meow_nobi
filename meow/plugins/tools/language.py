@@ -4,9 +4,9 @@ from pyrogram.types import InlineKeyboardButton, Message
 
 from config import BANNED_USERS
 from strings import get_command, get_string, languages_present
-from VIPMUSIC import app
-from VIPMUSIC.utils.database import get_lang, set_lang
-from VIPMUSIC.utils.decorators import ActualAdminCB, language, languageCB
+from meow import app
+from meow.utils.database import get_lang, set_lang
+from meow.utils.decorators import ActualAdminCB, language, languageCB
 
 # Languages Available
 
