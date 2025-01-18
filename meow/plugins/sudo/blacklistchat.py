@@ -3,10 +3,10 @@ from pyrogram.types import Message
 
 from config import BANNED_USERS
 from strings import get_command
-from VIPMUSIC import app
-from VIPMUSIC.misc import SUDOERS
-from VIPMUSIC.utils.database import blacklist_chat, blacklisted_chats, whitelist_chat
-from VIPMUSIC.utils.decorators.language import language
+from meow import app
+from meow.misc import SUDOERS
+from meow.utils.database import blacklist_chat, blacklisted_chats, whitelist_chat
+from meow.utils.decorators.language import language
 
 # Commands
 
