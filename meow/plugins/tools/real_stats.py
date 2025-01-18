@@ -5,10 +5,10 @@ from pyrogram.enums import ChatMemberStatus
 from pyrogram.errors import FloodWait
 from pyrogram.types import Message
 
-from VIPMUSIC import app
-from VIPMUSIC.core.mongo import mongodb
-from VIPMUSIC.misc import SUDOERS
-from VIPMUSIC.utils import get_readable_time
+from meow import app
+from meow.core.mongo import mongodb
+from meow.misc import SUDOERS
+from meow.utils import get_readable_time
 
 chatsdb = mongodb.chats
 usersdb = mongodb.tgusersdb
