@@ -2,12 +2,12 @@ from pyrogram import filters
 from pyrogram.types import Message
 
 from config import BANNED_USERS, LOG_GROUP_ID
-from VIPMUSIC import app
-from VIPMUSIC.core.userbot import assistants
-from VIPMUSIC.utils.assistant import get_assistant_details
-from VIPMUSIC.utils.assistant import is_avl_assistant as assistant
-from VIPMUSIC.utils.database import get_assistant, save_assistant, set_assistant
-from VIPMUSIC.utils.decorators import AdminActual
+from meow import app
+from meow.core.userbot import assistants
+from meow.utils.assistant import get_assistant_details
+from meow.utils.assistant import is_avl_assistant as assistant
+from meow.utils.database import get_assistant, save_assistant, set_assistant
+from meow.utils.decorators import AdminActual
 
 
 @app.on_message(filters.command("changeassistant") & ~BANNED_USERS)
