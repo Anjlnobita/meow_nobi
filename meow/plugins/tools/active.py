@@ -2,10 +2,10 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from unidecode import unidecode
 
-from VIPMUSIC import app
+from meow import app
 from VIPMUSIC.core.call import _st_ as clean
-from VIPMUSIC.misc import SUDOERS
-from VIPMUSIC.utils.database import (
+from meow.misc import SUDOERS
+from meow.utils.database import (
     get_active_chats,
     get_active_video_chats,
     get_assistant,
