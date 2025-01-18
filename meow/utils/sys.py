@@ -1,17 +1,8 @@
-#
-# Copyright (C) 2024 by THE-VIP-BOY-OP@Github, < https://github.com/THE-VIP-BOY-OP >.
-#
-# This file is part of < https://github.com/THE-VIP-BOY-OP/VIP-MUSIC > project,
-# and is released under the MIT License.
-# Please see < https://github.com/THE-VIP-BOY-OP/VIP-MUSIC/blob/master/LICENSE >
-#
-# All rights reserved.
-
 import time
 
 import psutil
 
-from VIPMUSIC.misc import _boot_
+from meow.misc import _boot_
 
 from .formatters import get_readable_time
 
