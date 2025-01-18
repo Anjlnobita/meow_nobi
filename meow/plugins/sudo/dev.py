@@ -10,9 +10,9 @@ from time import time
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
-from VIPMUSIC import app
-from VIPMUSIC.misc import SUDOERS
-from VIPMUSIC.utils.cleanmode import protect_message
+from meow import app
+from meow.misc import SUDOERS
+from meow.utils.cleanmode import protect_message
 
 
 async def aexec(code, client, message):
