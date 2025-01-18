@@ -9,7 +9,7 @@ from pyrogram.types import InlineKeyboardMarkup, InputMediaPhoto, Message
 from pytgcalls.exceptions import NoActiveGroupCall
 
 
-from meow.utils.errors import @capture_err
+from meow.utils.errors import capture_err
 
 import config
 from config import BANNED_USERS, LOG_GROUP_ID, OWNER_ID, lyrical
