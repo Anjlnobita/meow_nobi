@@ -5,6 +5,7 @@ from yt_dlp import YoutubeDL
 
 from meow import app
 from meow.misc import SUDOERS
+from meow.platforms.Youtube import cookies as cookie_tfile
 
 
 async def check_cookies(video_url):
