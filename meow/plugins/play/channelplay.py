@@ -4,9 +4,9 @@ from pyrogram.types import Message
 
 from config import BANNED_USERS
 from strings import get_command
-from VIPMUSIC import app
-from VIPMUSIC.utils.database import set_cmode
-from VIPMUSIC.utils.decorators.admins import AdminActual
+from meow import app
+from meow.utils.database import set_cmode
+from meow.utils.decorators.admins import AdminActual
 
 ### Multi-Lang Commands
 CHANNELPLAY_COMMAND = get_command("CHANNELPLAY_COMMAND")
