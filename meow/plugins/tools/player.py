@@ -2,9 +2,9 @@ from pyrogram import filters
 from pyrogram.types import Message
 
 from config import BANNED_USERS
-from VIPMUSIC import app
-from VIPMUSIC.misc import db
-from VIPMUSIC.utils.decorators import AdminRightsCheck
+from meow import app
+from meow.misc import db
+from meow.utils.decorators import AdminRightsCheck
 
 
 @app.on_message(
