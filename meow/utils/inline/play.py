@@ -4,9 +4,7 @@ from pyrogram.types import InlineKeyboardButton
 
 from meow.utils.formatters import time_to_seconds
 
-
-
-def stream_markup(_, chat_id):
+def stream_markup(_, videoid, chat_id):
     buttons = [
          [
             InlineKeyboardButton(text="ᴘᴀᴜsᴇ", callback_data=f"ADMIN Pause|{chat_id}"),
