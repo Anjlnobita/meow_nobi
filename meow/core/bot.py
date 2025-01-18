@@ -34,11 +34,11 @@ def run():
 
 
 # VIPBot Class
-class VIPBot(Client):
+class nobita(Client):
     def __init__(self):
         LOGGER(__name__).info("Starting Bot")
         super().__init__(
-            "VIPMUSIC",
+            "meow",
             api_id=config.API_ID,
             api_hash=config.API_HASH,
             bot_token=config.BOT_TOKEN,
@@ -65,10 +65,9 @@ class VIPBot(Client):
 
         if config.LOG_GROUP_ID:
             try:
-                await self.send_photo(
+                await self.send_message(
                     config.LOG_GROUP_ID,
-                    photo=config.START_IMG_URL,
-                    caption=f"╔════❰𝐖𝐄𝐋𝐂𝐎𝐌𝐄❱════❍⊱❁۪۪\n║\n║┣⪼🥀𝐁𝐨𝐭 𝐒𝐭𝐚𝐫𝐭𝐞𝐝 𝐁𝐚𝐛𝐲🎉\n║\n║┣⪼ {self.name}\n║\n║┣⪼🎈𝐈𝐃:- `{self.id}` \n║\n║┣⪼🎄@{self.username} \n║ \n║┣⪼💖𝐓𝐡𝐚𝐧𝐤𝐬 𝐅𝐨𝐫 𝐔𝐬𝐢𝐧𝐠😍\n║\n╚════════════════❍⊱❁",
+                 "╔════❰𝐖𝐄𝐋𝐂𝐎𝐌𝐄❱════❍⊱❁۪۪\n║\n║┣⪼🥀𝐁𝐨𝐭 𝐒𝐭𝐚𝐫𝐭𝐞𝐝 𝐁𝐚𝐛𝐲🎉\n║\n║┣⪼ {self.name}\n║\n║┣⪼🎈𝐈𝐃:- `{self.id}` \n║\n║┣⪼🎄@{self.username} \n║ \n║┣⪼💖𝐓𝐡𝐚𝐧𝐤𝐬 𝐅𝐨𝐫 𝐔𝐬𝐢𝐧𝐠😍\n║\n╚════════════════❍⊱❁",
                     reply_markup=button,
                 )
             except pyrogram.errors.ChatWriteForbidden as e:
@@ -90,55 +89,15 @@ class VIPBot(Client):
                 "LOG_GROUP_ID is not set, skipping log group notifications."
             )
         if config.SET_CMDS:
-            try:
+            try:       
                 await self.set_bot_commands(
                     commands=[
-                        BotCommand("start", "Start the bot"),
-                        BotCommand("help", "Get the help menu"),
-                        BotCommand("ping", "Check if the bot is alive or dead"),
-                    ],
-                    scope=BotCommandScopeAllPrivateChats(),
-                )
-                await self.set_bot_commands(
-                    commands=[
-                        BotCommand("play", "Start playing requested song"),
-                        BotCommand("stop", "Stop the current song"),
-                        BotCommand("pause", "Pause the current song"),
-                        BotCommand("resume", "Resume the paused song"),
-                        BotCommand("queue", "Check the queue of songs"),
-                        BotCommand("skip", "Skip the current song"),
-                        BotCommand("volume", "Adjust the music volume"),
-                        BotCommand("lyrics", "Get lyrics of the song"),
-                    ],
-                    scope=BotCommandScopeAllGroupChats(),
-                )
-                await self.set_bot_commands(
-                    commands=[
-                        BotCommand("start", "❥ Start the bot"),
-                        BotCommand("ping", "❥ Check the ping"),
-                        BotCommand("help", "❥ Get help"),
-                        BotCommand("vctag", "❥ Tag all for voice chat"),
-                        BotCommand("stopvctag", "❥ Stop tagging for VC"),
-                        BotCommand("tagall", "❥ Tag all members by text"),
-                        BotCommand("cancel", "❥ Cancel the tagging"),
-                        BotCommand("settings", "❥ Get the settings"),
-                        BotCommand("reload", "❥ Reload the bot"),
-                        BotCommand("play", "❥ Play the requested song"),
-                        BotCommand("vplay", "❥ Play video along with music"),
-                        BotCommand("end", "❥ Empty the queue"),
-                        BotCommand("playlist", "❥ Get the playlist"),
-                        BotCommand("stop", "❥ Stop the song"),
-                        BotCommand("lyrics", "❥ Get the song lyrics"),
-                        BotCommand("song", "❥ Download the requested song"),
-                        BotCommand("video", "❥ Download the requested video song"),
-                        BotCommand("gali", "❥ Reply with fun"),
-                        BotCommand("shayri", "❥ Get a shayari"),
-                        BotCommand("love", "❥ Get a love shayari"),
-                        BotCommand("sudolist", "❥ Check the sudo list"),
-                        BotCommand("owner", "❥ Check the owner"),
-                        BotCommand("update", "❥ Update bot"),
-                        BotCommand("gstats", "❥ Get stats of the bot"),
-                        BotCommand("repo", "❥ Check the repo"),
+                        BotCommand("start", "sᴛᴀʀᴛ ᴛʜᴇ ʙᴏᴛ"),
+                        BotCommand("play", "sᴏɴɢ ɴᴀᴍᴇ ᴛᴏ ᴘʟᴀʏ "),
+                        BotCommand("vplay", "sᴏɴɢ-ᴠɪᴅᴇᴏ ɴᴀᴍᴇ ᴛᴏ ᴘʟᴀʏ ᴛʜᴇ ᴠɪᴅᴇᴏ ɪɴ ᴠᴄ"),
+                        BotCommand("cplay", "ᴘʟᴀʏ ᴍᴜsɪᴄ ɪɴ ᴄʜᴀɴɴᴇʟ"),
+                        BotCommand("end", "sᴛᴏᴘ ᴛʜᴇ ᴘʟᴀʏɪɴɢ sᴏɴɢ"),
+                        BotCommand("skip", "sᴋɪᴘ ᴛʜᴇ ᴄᴜʀʀᴇɴᴛ ᴘʟᴀʏɪɴɢ sᴏɴɢ"),
                     ],
                     scope=BotCommandScopeAllChatAdministrators(),
                 )
@@ -162,7 +121,7 @@ class VIPBot(Client):
 
 # Define the async boot function
 async def anony_boot():
-    bot = VIPBot()
+    bot = nobita()
     await bot.start()
     await idle()
 
@@ -175,9 +134,9 @@ if __name__ == "__main__":
     t.daemon = True
     t.start()
 
-    LOGGER(__name__).info("Starting VIPBot...")
+    LOGGER(__name__).info("Starting meow...")
 
     # Run the bot
     asyncio.run(anony_boot())
 
-    LOGGER(__name__).info("Stopping VIPBot...")
+    LOGGER(__name__).info("Stopping meow...")
