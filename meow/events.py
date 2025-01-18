@@ -1,5 +1,5 @@
 from telethon import events
-from meow import telethn
+from __main__ import telethn
 
 
 def register(**args):
