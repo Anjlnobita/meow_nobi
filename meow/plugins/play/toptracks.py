@@ -11,20 +11,20 @@ from pyrogram.errors import (
 from pyrogram.types import InlineKeyboardMarkup
 
 from config import BANNED_USERS
-from VIPMUSIC import app
-from VIPMUSIC.utils.database import (
+from meow import app
+from meow.utils.database import (
     get_assistant,
     get_global_tops,
     get_particulars,
     get_userss,
 )
-from VIPMUSIC.utils.decorators.language import languageCB
-from VIPMUSIC.utils.inline.playlist import (
+from meow.utils.decorators.language import languageCB
+from meow.utils.inline.playlist import (
     botplaylist_markup,
     failed_top_markup,
     top_play_markup,
 )
-from VIPMUSIC.utils.stream.stream import stream
+from meow.utils.stream.stream import stream
 
 loop = asyncio.get_running_loop()
 
