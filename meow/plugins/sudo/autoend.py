@@ -1,9 +1,9 @@
 from pyrogram import filters
 
 from strings import get_command
-from VIPMUSIC import app
-from VIPMUSIC.misc import SUDOERS
-from VIPMUSIC.utils.database import autoend_off, autoend_on
+from meow import app
+from meow.misc import SUDOERS
+from meow.utils.database import autoend_off, autoend_on
 
 # Commands
 AUTOEND_COMMAND = get_command("AUTOEND_COMMAND")
