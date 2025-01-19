@@ -102,7 +102,7 @@ async def stop_music(cli, message: Message):
 from pyrogram import filters
 from pyrogram.types import Message
 
-from VIPMUSIC import app
+from meow import app
 
 photo = [
     "https://envs.sh/qeq.jpg",
