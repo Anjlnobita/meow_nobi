@@ -15,7 +15,7 @@ from config import BANNED_USERS
 from strings import get_command
 from meow import YouTube, app
 from meow.core.userbot import assistants
-from meow.misc import SUDOERS, pymongodb
+from meow.misc import SUDOERS, mongodb as pymongodb
 from meow.plugins import ALL_MODULES
 from meow.utils.database import (
     get_global_tops,
