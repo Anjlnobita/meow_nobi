@@ -8,10 +8,10 @@ from pyrogram.raw.functions.phone import CreateGroupCall, DiscardGroupCall
 from pyrogram.raw.types import InputGroupCall, InputPeerChannel, InputPeerChat
 from pyrogram.types import ChatPrivileges, Message
 
-from VIPMUSIC import app
-from VIPMUSIC.core.call import VIP
-from VIPMUSIC.utils.database import *
-from VIPMUSIC.utils.database import set_loop
+from meow import app
+from meow.core.call import meow as VIP
+from meow.utils.database import *
+from meow.utils.database import set_loop
 
 other_filters = filters.group & ~filters.via_bot & ~filters.forwarded
 other_filters2 = filters.private & ~filters.via_bot & ~filters.forwarded
