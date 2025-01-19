@@ -1,7 +1,6 @@
 import asyncio
 import threading
 
-
 import pyrogram 
 import uvloop
 from flask import Flask
@@ -36,11 +35,11 @@ def run():
 
 
 # VIPBot Class
-class nobita(Client):
+class VIPBot(Client):
     def __init__(self):
         LOGGER(__name__).info("Starting Bot")
         super().__init__(
-            "meow",
+            "VIPMUSIC",
             api_id=config.API_ID,
             api_hash=config.API_HASH,
             bot_token=config.BOT_TOKEN,
@@ -67,9 +66,10 @@ class nobita(Client):
 
         if config.LOG_GROUP_ID:
             try:
-                await self.send_message(
+                await self.send_photo(
                     config.LOG_GROUP_ID,
-                 "╔════❰𝐖𝐄𝐋𝐂𝐎𝐌𝐄❱════❍⊱❁۪۪\n║\n║┣⪼🥀𝐁𝐨𝐭 𝐒𝐭𝐚𝐫𝐭𝐞𝐝 𝐁𝐚𝐛𝐲🎉\n║\n║┣⪼ {self.name}\n║\n║┣⪼🎈𝐈𝐃:- `{self.id}` \n║\n║┣⪼🎄@{self.username} \n║ \n║┣⪼💖𝐓𝐡𝐚𝐧𝐤𝐬 𝐅𝐨𝐫 𝐔𝐬𝐢𝐧𝐠😍\n║\n╚════════════════❍⊱❁",
+                    photo=config.START_IMG_URL,
+                    caption=f"╔════❰𝐖𝐄𝐋𝐂𝐎𝐌𝐄❱════❍⊱❁۪۪\n║\n║┣⪼🥀𝐁𝐨𝐭 𝐒𝐭𝐚𝐫𝐭𝐞𝐝 𝐁𝐚𝐛𝐲🎉\n║\n║┣⪼ {self.name}\n║\n║┣⪼🎈𝐈𝐃:- `{self.id}` \n║\n║┣⪼🎄@{self.username} \n║ \n║┣⪼💖𝐓𝐡𝐚𝐧𝐤𝐬 𝐅𝐨𝐫 𝐔𝐬𝐢𝐧𝐠😍\n║\n╚════════════════❍⊱❁",
                     reply_markup=button,
                 )
             except pyrogram.errors.ChatWriteForbidden as e:
@@ -91,8 +91,8 @@ class nobita(Client):
                 "LOG_GROUP_ID is not set, skipping log group notifications."
             )
         if config.SET_CMDS:
-            try:       
-                await self.set_bot_commands(
+            try:
+              await self.set_bot_commands(
                     commands=[
                         BotCommand("start", "sᴛᴀʀᴛ ᴛʜᴇ ʙᴏᴛ"),
                         BotCommand("play", "sᴏɴɢ ɴᴀᴍᴇ ᴛᴏ ᴘʟᴀʏ "),
@@ -103,6 +103,8 @@ class nobita(Client):
                     ],
                     scope=    BotCommandScopeAllGroupChats(),
                 )
+
+
             except Exception as e:
                 LOGGER(__name__).error(f"Failed to set bot commands: {e}")
 
@@ -136,9 +138,9 @@ if __name__ == "__main__":
     t.daemon = True
     t.start()
 
-    LOGGER(__name__).info("Starting meow...")
+    LOGGER(__name__).info("Starting VIPBot...")
 
     # Run the bot
     asyncio.run(anony_boot())
 
-    LOGGER(__name__).info("Stopping meow...")
+    LOGGER(__name__).info("Stopping VIPBot...")
