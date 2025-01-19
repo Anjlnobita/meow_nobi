@@ -24,7 +24,7 @@ from meow.utils.database import (
     remove_active_video_chat,
 )
 from meow.utils.decorators.language import language
-from meow.utils.pastebin import VIPbin
+from meow.utils.pastebin import meowbin
 
 # Commands
 GETLOG_COMMAND = get_command("GETLOG_COMMAND")
