@@ -23,7 +23,7 @@ async def init():
             "No Assistant Clients Vars Defined!.. Exiting Process."
         )
         exit()
-    await sudo()
+    #await sudo()
     try:
         users = await get_gbanned()
         for user_id in users:
