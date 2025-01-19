@@ -24,7 +24,7 @@ from meow.utils.database import (
     remove_active_video_chat,
 )
 from meow.utils.decorators.language import language
-from meow.utils.pastebin import meowbin
+from meow.utils.pastebin import meowbin as VIPbin
 
 # Commands
 GETLOG_COMMAND = get_command("GETLOG_COMMAND")
@@ -133,7 +133,7 @@ async def vardel_(client, message, _):
             return await message.reply_text(_["heroku_4"])
         else:
             await message.reply_text(_["heroku_7"].format(check_var))
-            os.system(f"kill -9 {os.getpid()} && python3 -m VIPMUSIC")
+            os.system(f"kill -9 {os.getpid()} && python3 -m meow")
 
 
 @app.on_message(filters.command(SETVAR_COMMAND) & filters.user(OWNER_ID))
@@ -162,7 +162,7 @@ async def set_var(client, message, _):
             await message.reply_text(_["heroku_9"].format(to_set))
         else:
             await message.reply_text(_["heroku_10"].format(to_set))
-        os.system(f"kill -9 {os.getpid()} && python3 -m VIPMUSIC")
+        os.system(f"kill -9 {os.getpid()} && python3 -m meow")
 
 
 @app.on_message(filters.command(USAGE_COMMAND) & filters.user(OWNER_ID))
@@ -305,7 +305,7 @@ async def update_(client, message, _):
             )
     else:
         os.system("pip3 install --no-cache-dir -U -r requirements.txt")
-        os.system(f"kill -9 {os.getpid()} && python3 -m VIPMUSIC")
+        os.system(f"kill -9 {os.getpid()} && python3 -m meow")
         exit()
 
 
@@ -333,7 +333,7 @@ async def restart_(_, message):
     await response.edit_text(
         "» ʀᴇsᴛᴀʀᴛ ᴘʀᴏᴄᴇss sᴛᴀʀᴛᴇᴅ, ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ ғᴏʀ ғᴇᴡ sᴇᴄᴏɴᴅs ᴜɴᴛɪʟ ᴛʜᴇ ʙᴏᴛ sᴛᴀʀᴛs..."
     )
-    os.system(f"kill -9 {os.getpid()} && python3 -m VIPMUSIC")
+    os.system(f"kill -9 {os.getpid()} && python3 -m meow")
 
 
 import requests
