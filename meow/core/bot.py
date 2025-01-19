@@ -35,7 +35,7 @@ def run():
 
 
 # VIPBot Class
-class VIPBot(Client):
+class nobita(Client):
     def __init__(self):
         LOGGER(__name__).info("Starting Bot")
         super().__init__(
