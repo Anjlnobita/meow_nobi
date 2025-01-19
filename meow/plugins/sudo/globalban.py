@@ -144,9 +144,9 @@ from pyrogram.enums import MessageEntityType
 from pyrogram.types import Message, User
 
 from config import BANNED_USERS
-from VIPMUSIC import app
-from VIPMUSIC.misc import SUDOERS
-from VIPMUSIC.utils.database import add_banned_user, is_banned_user, remove_banned_user
+from meow import app
+from meow.misc import SUDOERS
+from meow.utils.database import add_banned_user, is_banned_user, remove_banned_user
 
 
 async def extract_user(m: Message) -> User:
