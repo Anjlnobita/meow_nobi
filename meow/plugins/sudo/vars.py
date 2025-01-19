@@ -6,7 +6,7 @@ import config
 from strings import get_command
 from meow import app
 from meow.misc import SUDOERS
-from meow.utils.database.memorydatabase import get_video_limit
+from meow.utils.database import get_video_limit
 from meow.utils.formatters import convert_bytes
 
 VARS_COMMAND = get_command("VARS_COMMAND")
