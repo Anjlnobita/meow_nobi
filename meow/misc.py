@@ -47,12 +47,15 @@ def dbb():
 
 async def sudo():
     global SUDOERS
-    SUDOERS.add(tuple(config.OWNER_ID))  # Convert list to tuple
+    SUDOERS.add(config.OWNER_ID[0])
     sudoersdb = mongodb.sudoers
     sudoers = await sudoersdb.find_one({"sudo": "sudo"})
-    sudoers = [] if not sudoers else sudoers["sudoers"]
-    if tuple(config.OWNER_ID) not in sudoers:  # Convert list to tuple
-        sudoers.append(tuple(config.OWNER_ID))  # Convert list to tuple
+    if sudoers is None:
+        sudoers = []
+    else:
+        sudoers = sudoers["sudoers"]
+    if config.OWNER_ID[0] not in sudoers:
+        sudoers.append(config.OWNER_ID[0])
     await sudoersdb.update_one(
         {"sudo": "sudo"},
         {"$set": {"sudoers": sudoers}},
@@ -60,7 +63,7 @@ async def sudo():
     )
     if sudoers:
         for user_id in sudoers:
-            SUDOERS.add(tuple(user_id))  # Convert list to tuple
+            SUDOERS.add(user_id)
     LOGGER(__name__).info(f"Sudoers Loaded.")
 
 def heroku():
