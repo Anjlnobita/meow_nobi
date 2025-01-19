@@ -17,7 +17,7 @@ from meow.utils.database import (
 from meow.utils.exceptions import AssistantErr
 from meow.utils.inline.play import queue_markup, stream_markup, telegram_markup
 from meow.utils.inline.playlist import close_markup
-from meow.utils.pastebin import VIPbin
+from meow.utils.pastebin import meowbin
 from meow.utils.stream.queue import put_queue, put_queue_index
 from meow.utils.thumbnails import gen_qthumb, gen_thumb
 
